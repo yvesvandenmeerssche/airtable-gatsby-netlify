@@ -1,3 +1,7 @@
 [build]
-publish = "public"
-command = "./stackbit-build.sh"
+  functions = "build-lambda"
+  publish = "dist/"
+  command = "yarn build"
+
+[build.environment]
+  AIRTABLE_API_URL = "https://d2j5hchu5g3uxq.cloudfront.net"
